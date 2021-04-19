@@ -50,13 +50,21 @@
               underlineColorAndroid="transparent"
               />
             </View>
-           <Button
+            <View style={Styles.searchSection}>
+              
+              <TextInput
+              style={Styles.input}
+              placeholder="Contraseña"
+              underlineColorAndroid="transparent"
+              />
+            </View>
+       </View>
+       <Button
            onPress={() => Alert.alert('Debe llenar los campos')}
            title="Ingresar"
            color="#F3671C"
            accessibilityLabel="Calmado muelon"
            style={Styles.btn}/>
-       </View>
      </ImageBackground>
      </SafeAreaView>
    );

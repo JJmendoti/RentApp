@@ -10,7 +10,7 @@ const Styles = StyleSheet.create({
         alignItems: 'center'
     },
     inputContainer: {
-        flex: 2,
+        flex: 1,
         flexDirection: 'column',
         alignItems: 'center'
     },
@@ -58,16 +58,18 @@ const Styles = StyleSheet.create({
       borderRadius: 16,
       alignItems: 'center',
       backgroundColor: '#fff',
+      marginTop: 20,
     },
     searchIcon: {
         padding: 10,
     },
     input: {
-        flex: 1,
+        height:40,
+        width: Dimensions.get('screen').width * 0.9,
         paddingTop: 10,
         paddingRight: 10,
         paddingBottom: 10,
-        paddingLeft: 0,
+        paddingLeft: 10,
         borderRadius: 16,
         backgroundColor: '#fff',
         color: '#424242',
