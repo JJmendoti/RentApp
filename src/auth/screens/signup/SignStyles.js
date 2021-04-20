@@ -34,18 +34,6 @@ const Styles = StyleSheet.create({
         fontStyle: "italic",
         fontSize: 22
     },
-    // input: {
-    //   height:40,
-    //   backgroundColor: "white",
-    //   width: Dimensions.get('screen').width * 0.9,
-    //   paddingHorizontal: 22,
-    //   borderRadius: 16,
-    //   marginTop: 40,
-    //   shadowColor: "#000",
-    //   shadowOpacity: 0.15,
-    //   shadowRadius: 2.84,
-    //   elevation: 4,
-    // },
     btn: {
         width: Dimensions.get('screen').width * 0.9,
     },

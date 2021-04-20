@@ -34,6 +34,7 @@
 //  } from 'react-native/Libraries/NewAppScreen';
  import Styles from './LoginStyles';
  const LoginScreen= ({navigation}) => {
+
    const[email,setEmail] = useState("")
    const[password,setPassword] = useState("")
    const validateLogin = () =>{
