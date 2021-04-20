@@ -96,6 +96,16 @@
               underlineColorAndroid="transparent"
               />
             </View>
+            <View style={Styles.recovered}>
+              <TouchableOpacity onPress={()=>{
+                navigation.navigate("recovered")
+              }
+              }>
+              <Text style={Styles.recoveredText}>
+                ¿Haz olvidado tu contraseña?
+              </Text>
+              </TouchableOpacity>
+            </View>
        </View>
       <View style={Styles.signContainer}>
       <TouchableOpacity onPress={()=>validateLogin()}>

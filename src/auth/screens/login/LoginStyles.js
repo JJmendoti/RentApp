@@ -96,6 +96,14 @@ const Styles = StyleSheet.create({
       marginBottom: 10,
       padding: 13,
       borderRadius: 16,
+    },
+    recovered: {
+      marginTop: 10,
+      alignSelf: 'flex-end',
+      paddingRight: 20
+    },
+    recoveredText: {
+      color: '#fff'
     }
   });
 

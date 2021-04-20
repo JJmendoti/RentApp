@@ -28,7 +28,7 @@ const RecoverPassword = ({navigation}) =>{
        
       }
       return (
-          <ScrollView style={}>
+          <ScrollView>
               
           </ScrollView>
       )
