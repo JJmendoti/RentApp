@@ -32,7 +32,7 @@
 //    LearnMoreLinks,
 //    ReloadInstructions,
 //  } from 'react-native/Libraries/NewAppScreen';
- import Styles from './LoginStyles';
+ import Styles from './SignStyles';
  const SignUp = ({navigation}) => {
   
    return (
