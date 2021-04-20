@@ -10,17 +10,16 @@ const Styles = StyleSheet.create({
         alignItems: 'center'
     },
     inputContainer: {
-        flex: 1,
+        flex: 2,
         flexDirection: 'column',
         alignItems: 'center'
     },
     logo: {
-      width: 100,
-      height: 100,
-      marginTop: 14
+      width: 250,
+      height: 110
     },
     logoContainer: {
-      flex: 2,
+      flex: 1,
       alignItems: "center"
     },
     textContainer:{
@@ -58,7 +57,7 @@ const Styles = StyleSheet.create({
       borderRadius: 16,
       alignItems: 'center',
       backgroundColor: '#fff',
-      marginTop: 20,
+      marginTop: 10,
     },
     searchIcon: {
         padding: 10,
@@ -66,7 +65,6 @@ const Styles = StyleSheet.create({
     input: {
         height:40,
         width: Dimensions.get('screen').width * 0.9,
-        paddingTop: 10,
         paddingRight: 10,
         paddingBottom: 10,
         paddingLeft: 10,
@@ -74,6 +72,31 @@ const Styles = StyleSheet.create({
         backgroundColor: '#fff',
         color: '#424242',
     },
+    register: {
+      backgroundColor: '#D4AC0D',
+      width: 100,
+      alignItems: 'center',
+      marginTop: 10,
+      padding: 10,
+      borderRadius: 16,
+
+    },
+    registerContainer: {
+    alignItems: 'flex-end',
+    paddingRight: 10,
+    },
+    signContainer: {
+      alignItems: 'center',
+
+    },
+    sign: {
+      backgroundColor: '#D4AC0D',
+      width: Dimensions.get('screen').width * 0.9,
+      alignItems: 'center',
+      marginBottom: 10,
+      padding: 13,
+      borderRadius: 16,
+    }
   });
 
 export default Styles;
