@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import stylesRecover from './RecoverStyles';
 
-const RecoverPassword = () => {
+const RecoverPassword = ({navigation}) => {
   const [email, setEmail] = useState('');
   const validateRecoverPass = () => {
     if (email === '') {
@@ -28,6 +28,13 @@ const RecoverPassword = () => {
   return (
     <SafeAreaView style={stylesRecover.container}>
       <StatusBar backgroundColor="black" translucent={true} />
+      <View style={stylesRecover.containerBack}>
+            <TouchableOpacity onPress={()=>{
+              navigation.navigate("login");
+            }}>
+              <Image source={require('./img/logo1.png')} style={stylesRecover.imageBack} />
+            </TouchableOpacity>
+          </View>
       <View style={[stylesRecover.containerCenter]}>
         <View>
           <Image

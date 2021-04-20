@@ -8,8 +8,15 @@ const stylesRecover = StyleSheet.create({
         flex: 1,
         backgroundColor: "#010101"
 
+    },containerBack: {
+        padding: 10,
+        flexDirection: 'row',
+        paddingTop: 40
     },
-
+    imageBack: {
+        width: 40,
+        height: 40
+    },
     containerCenter: {
         paddingTop: 10,
         alignItems: 'center',
