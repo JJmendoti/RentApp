@@ -6,8 +6,10 @@ const Styles = StyleSheet.create({
       display: 'flex',
       flexDirection: 'row',
       borderWidth: 3,
-      borderColor: "#E1E1E1",
-      borderRadius: 6,
+      margin: 5,
+      borderRadius: 10,
+      borderColor: "#010101",
+      borderWidth: 1,
     },
     logo: {
       flex: 1,
