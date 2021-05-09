@@ -34,15 +34,17 @@
  //  } from 'react-native/Libraries/NewAppScreen';
  import Styles from './UserStyles';
  import Useritem from '../../components/User/Useritem.js'
+ import UsersService from '../../../services/UserServices.js'
  const UserScreen = ({navigation}) => {
-   const[users,setUsers]=useState([])
-    const getUser = async ()  => {
-      const response  = await fetch("https://api-rentapp.herokuapp.com/user");
-      const jsonResponse = await response.json();
-      setUsers(jsonResponse)
-    }
+
+   const[users,setUsers]=useState([]);
+      const getUsers = async () => {
+        const users = await UsersService.getUsers();
+        setUsers(users);
+    } 
+   
     useEffect(() => {
-      getUser()
+      getUsers()
     },[])
     
    return (

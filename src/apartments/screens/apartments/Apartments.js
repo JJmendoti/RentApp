@@ -34,21 +34,24 @@
  //  } from 'react-native/Libraries/NewAppScreen';
  import Styles from './ApartmentsStyles.js';
  import ApartmenItem from '../../../auth/components/apartmentList/ApartmenItem.js'
+ import ApartmentService from '../../../services/ApartmentService.js'
  const Apartments = ({navigation}) => {
    const[apartment,setApartment]=useState([])
-    const getUser = async ()  => {
-      const response  = await fetch("https://api-rentapp.herokuapp.com/apartment");
-      const jsonResponse = await response.json();
-      setApartment(jsonResponse)
+    const getApartments = async ()  => {
+      const apartment  = await ApartmentService.getApartments();
+      setApartment(apartment);
     }
     useEffect(() => {
-      getUser()
+      getApartments()
     },[])
     
    return (
      <SafeAreaView style={Styles.container}>
        <View style={Styles.containersha}>
-        <FlatList data={apartment} renderItem = {({item})=><ApartmenItem apartment={item}></ApartmenItem>} keyExtractor={(item, index) => index.toString()}>
+        <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => ApartmentService.getApartment(item._id.$oid)}>
+        <ApartmenItem apartment={item}></ApartmenItem>
+        </TouchableOpacity>}
+         keyExtractor={(item, index) => index.toString()}>
         </FlatList>    
        </View>
      </SafeAreaView>
