@@ -71,7 +71,7 @@ const stylesRecover = StyleSheet.create({
     logo: {
         width: 350,
         height: 150,
-        marginTop: 100,
+        marginTop: 50,
     },
 });
 
