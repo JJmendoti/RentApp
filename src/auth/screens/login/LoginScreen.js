@@ -23,22 +23,39 @@ import {
   TouchableHighlight,
   TouchableOpacity,
 } from 'react-native';
-
-//  import {
-//    Colors,
-//    DebugInstructions,
-//    Header,
-//    LearnMoreLinks,
-//    ReloadInstructions,
-//  } from 'react-native/Libraries/NewAppScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Styles from './LoginStyles';
+
+
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
+  const login = (email, password) => {  
+    fetch('https://api-rentapp.herokuapp.com/signinuser', {
+      method: 'POST',
+      headers: { 
+          "Content-type": "application/json; charset=UTF-8"
+      },
+      body: JSON.stringify({"user": email, "password": password})
+    })
+    .then(response => response.json())
+    .then(json => {
+      if(json.status == "200"){
+        navigation.navigate("users")
+        AsyncStorage.setItem('loggedIn', true);
+      }else {
+        Alert.alert("Datos incorrectos")
+      }
+    })
+    .catch((err) => { Alert.alert('Error:',err.message) });
+  }; 
   const validateLogin = () => {
+  
     if (email === '' || password === '') {
       Alert.alert('Todos los Campos deben estar llenos');
     } else {
+      login(email,password)
       setEmail('');
       setPassword('');
     }

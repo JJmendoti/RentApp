@@ -2,7 +2,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const Styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flex: 1
     },
     iconContainer:{
         flex: 1,
@@ -17,6 +17,9 @@ const Styles = StyleSheet.create({
     logoContainer: {
       flex: 1,
       alignItems: "center"
+    },
+    indicator: {
+      paddingBottom: 5
     }
   });
 

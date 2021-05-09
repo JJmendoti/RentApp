@@ -30,7 +30,7 @@ const stylesRecover = StyleSheet.create({
         fontFamily: "Poppins-SemiBold"
     }, 
     input: {
-        height:50,
+        height:40,
         width: Dimensions.get('screen').width * 0.9,
         paddingRight: 15,
         marginTop:100,
@@ -63,7 +63,7 @@ const stylesRecover = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18,
         color: '#fff',
-        paddingVertical: 15,
+        paddingVertical: 10,
         
     },
     
