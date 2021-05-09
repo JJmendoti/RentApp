@@ -5,9 +5,10 @@ const Styles = StyleSheet.create({
       padding: 10,
       display: 'flex',
       flexDirection: 'row',
-      borderWidth: 3,
-      borderColor: "#E1E1E1",
-      borderRadius: 6,
+      margin: 5,
+      borderRadius: 10,
+      borderColor: "#010101",
+      borderWidth: 1,
       width: Dimensions.get('screen').width * 1,
     },
     logo: {

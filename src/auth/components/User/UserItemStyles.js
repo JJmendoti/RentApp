@@ -5,7 +5,6 @@ const Styles = StyleSheet.create({
       padding: 10,
       display: 'flex',
       flexDirection: 'row',
-      borderWidth: 3,
       margin: 5,
       borderRadius: 10,
       borderColor: "#010101",
