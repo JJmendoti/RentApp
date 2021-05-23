@@ -20,7 +20,8 @@
  } from 'react-native';
  
  import Styles from './SaveApartmentStyles.js';
- const SaveApartment = ({navigation}) => {
+ const SaveApartment = ({route, navigation}) => {
+    let id = route.params.id;
     const[name, setName] = useState("")
     const[address, setAddress] = useState("")
     const[value, setValue] = useState("")
@@ -28,11 +29,34 @@
     const[city, setCity] = useState("")
     const[image, setImage] = useState("")
 
-    const validateLogin = () =>{
+
+    const saveAp = (name, address,value,country,city,image, id) => {  
+        fetch('https://api-rentapp.herokuapp.com/apartment', {
+          method: 'POST',
+          headers: { 
+              "Content-type": "application/json; charset=UTF-8"
+          },
+          body: JSON.stringify({"idonwer": id, "name": name, "address": address,"nigth_value": value,"country": country, "city":city, "image": "https://api-rentapp.herokuapp.com/static/img/"+image})
+        })
+        .then(response => response.json())
+        .then(json => {
+          if(json.status == "200"){
+                navigation.navigate("apartmentuser",{
+                    id: id
+                })
+          }else {
+            Alert.alert("Datos incorrectos")
+          }
+        })
+        .catch((err) => { Alert.alert('Error:',err.message) });
+      }; 
+
+    const validateApartment = () =>{
       if(address === "" || value === "" || name === "" || country ===""|| city===""||image === ""){
         Alert.alert("Todos los Campos deben estar llenos")
         
       }else {
+        saveAp(name,address,value,country,city,image, id);
         setAddress("");
         setValue("");
        setName("");
@@ -71,6 +95,9 @@
               style={Styles.input}
               placeholder="Nombre"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setName(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -82,6 +109,9 @@
               style={Styles.input}
               placeholder="Valor noche"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setValue(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -93,6 +123,9 @@
               style={Styles.input}
               placeholder="Dirección"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setAddress(text);
+              }}
               />
             </View>
          
@@ -101,11 +134,13 @@
               <TextInput
               inlineImageLeft = 'outline_flag_black_20'
               defaultValue = {country}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Pais"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setCountry(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -113,11 +148,13 @@
               <TextInput
               inlineImageLeft = 'outline_apartment_black_20'
               defaultValue = {city}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Ciudad"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setCity(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -125,16 +162,18 @@
               <TextInput
               inlineImageLeft = 'outline_image_black_20'
               defaultValue = {image}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Imagen"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setImage(text);
+              }}
               />
             </View>
        </View>
        <View style={Styles.signContainer}>
-      <TouchableOpacity onPress={()=>validateLogin()}>
+      <TouchableOpacity onPress={()=>validateApartment()}>
       <View style={Styles.sign}>
          <Text style={Styles.signText}>REGISTRAR APARTAMENTO</Text>
        </View>
