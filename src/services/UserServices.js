@@ -12,9 +12,16 @@
         return jsonResponse;
       }
 
+      const getUserEmail = async (email)  => {
+        const response  = await fetch("https://api-rentapp.herokuapp.com/user-email/"+email);
+        const jsonResponse = await response.json();
+        return jsonResponse;
+      }
+
 const UserService = {
           getUsers,
-          getUser
+          getUser,
+          getUserEmail
 }
 
 export default UserService;

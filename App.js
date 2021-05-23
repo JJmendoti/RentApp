@@ -16,6 +16,8 @@ import UserScreen from './src/auth/screens/user/UserScreen';
 import RecoverPassword from './src/auth/screens/recover_password/RecoverPassword';
 import Apartments from './src/apartments/screens/apartments/Apartments';
 import Home from './src/home/screens/Home';
+import HomeUser from './src/user/srceens/HomeUser.js';
+import ApartmentsUser from './src/apartments/apartments_user/screens/ApartmentsUser.js';
 
 
 
@@ -33,6 +35,8 @@ const App = () => {
         <Stack.Screen name="users" component={UserScreen} options={{headerShown: false}} />
         <Stack.Screen name="apartments" component={Apartments} options={{headerShown: false}} />
         <Stack.Screen name="home" component={Home} options={{headerShown: false}} />
+        <Stack.Screen name="homeuser" component={HomeUser} options={{headerShown: false}} />
+        <Stack.Screen name="apartmentuser" component={ApartmentsUser} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

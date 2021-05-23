@@ -12,9 +12,17 @@
         console.log(jsonResponse);
       }
 
+      const getApartmentUser = async (id)  => {
+        const response  = await fetch("https://api-rentapp.herokuapp.com/apartment-user/"+id);
+        const jsonResponse = await response.json();
+        return jsonResponse;
+      }
+
+
 const ApartmentService = {
           getApartments,
-          getApartment
+          getApartment,
+          getApartmentUser
 }
 
 export default ApartmentService;

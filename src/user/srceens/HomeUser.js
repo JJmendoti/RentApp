@@ -24,10 +24,10 @@
    TouchableOpacity,
    FlatList
  } from 'react-native';
- 
- import Styles from './HomeStyles.js';
+
+ import Styles from './HomeUserStyles.js';
  import UsersService from '../../services/UserServices.js';
- const Home = ({route,navigation}) => {  
+ const HomeUser = ({route,navigation}) => {  
   const [currentDate, setCurrentDate] = useState('');
   var email = route.params.email;
   const[user,setUser] = useState("");
@@ -46,10 +46,18 @@
     getUser();
   }, []);  
   let image = user.image;
+
+  const toApartments = ()=>{
+    navigation.navigate("apartmentuser",{
+      id: user._id.$oid
+    })
+  }
    return (
     <ScrollView>
+      <ImageBackground style={{flex: 1}} source={require('./img/homeuser.jpg')}>
      <SafeAreaView style={Styles.container}>
-        <View style={Styles.data}>
+     
+      <View style={Styles.data}>
           <View  style={Styles.containerVac}>
             <Text></Text>
           </View>
@@ -65,9 +73,23 @@
            <Text style={Styles.title}>Bienvenido</Text>
            <Text style={Styles.titlename}>{user.name}</Text>
        </View>
+       <View style={Styles.data_container}>
+           <Text style={Styles.item_title}>Correo Electrónico: </Text>
+              <Text style={Styles.item_data}>{user.email}</Text>
+              <Text style={Styles.item_title}>Identificación: </Text>  
+              <Text style={Styles.item_data}>{user.ident}</Text>
+              <Text style={Styles.item_title}>Ubicación: </Text>
+              <Text style={Styles.item_data}>{user.city} - {user.country}</Text>
+        </View> 
+        <TouchableOpacity onPress={() => toApartments()}>
+          <View style={Styles.btn}>
+            <Text style={Styles.btn_text}>Ver Apartamentos</Text>
+          </View>
+        </TouchableOpacity>
      </SafeAreaView>
+     </ImageBackground>
      </ScrollView>
    );
  };
  
- export default Home;
+ export default HomeUser;

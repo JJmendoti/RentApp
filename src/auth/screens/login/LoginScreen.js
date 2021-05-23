@@ -23,7 +23,6 @@ import {
   TouchableHighlight,
   TouchableOpacity,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Styles from './LoginStyles';
 
 
@@ -42,8 +41,9 @@ const LoginScreen = ({navigation}) => {
     .then(response => response.json())
     .then(json => {
       if(json.status == "200"){
-        navigation.navigate("users")
-        AsyncStorage.setItem('loggedIn', true);
+        navigation.navigate("homeuser",{
+          email: email
+        })
       }else {
         Alert.alert("Datos incorrectos")
       }
