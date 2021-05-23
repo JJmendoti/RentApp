@@ -2,47 +2,49 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 const Styles = StyleSheet.create({
   container:{
+    flex: 1,
     padding: 10,
-  },data: {
-      display: 'flex',
-      flexDirection: 'row'
+ 
   },
-  data_text:{
-    fontWeight: 'bold',
-    paddingTop: 10,
-  },
-  sun: {
-    flex: 1,
-      width: 40,
-      height: 40,
-      resizeMode: 'contain',
-  },
-  containerData:{
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  containerVac:{
-    flex: 3,
-  },title: {
-    textAlign: 'center',
-  },
-  titlename: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-  logo: {
-    flex: 1,
-    width: 200,
-    height: 200,
-    resizeMode: 'contain',
-    marginEnd: 20
-  },
-  containlogo:{
-    alignItems: 'center',
-    marginBottom: 10
-  }
+login: {
+      backgroundColor: '#D4AC0D',
+      width: 100,
+      alignItems: 'center',
+      marginTop: 10,
+      padding: 10,
+      borderRadius: 16,
+
+    },
+    loginContainer: {
+    alignItems: 'flex-end',
+    paddingRight: 10,
+    },
+    signContainer: {
+      alignItems: 'center',
+
+    },
+    title: {
+      textAlign: 'center',
+      marginTop: 10,
+    },
+    containerImg:{
+      flex: 1,
+      flexDirection: 'row',
+    },
+    Img: { 
+      width: 190, 
+      height: 190,
+      borderRadius: 10,
+      borderColor: '#010101',
+      marginTop: 10,
+      marginLeft: 5
+    }
+
+
+
+
+
+
   });
 
 export default Styles;
