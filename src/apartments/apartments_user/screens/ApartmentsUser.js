@@ -9,7 +9,7 @@
  import React, {useState, useEffect} from 'react';
  import {
    SafeAreaView,
-   //  ScrollView,
+   ScrollView,
    StatusBar,
    //  StyleSheet,
    Text,
@@ -22,7 +22,8 @@
    ImageBackground,
    TouchableHighlight,
    TouchableOpacity,
-   FlatList
+   FlatList,
+   SliderComponent
  } from 'react-native';
  
  import Styles from './ApartmentUserStyles.js';
@@ -37,13 +38,16 @@
       setApartment(apartment);
     }
     useEffect(() => {
+      
       getApartments(id)
+
     },[])
 
-    if(apartment.length > 0){
+  
+      if(apartment.length > 0){
         return(
-            <SafeAreaView style={Styles.container}>
-
+        <ScrollView>
+        <SafeAreaView style={Styles.container}>
         <View style={Styles.containersha}>
         <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => ApartmentService.getApartment(item._id.$oid)}>
         <ApartmenItem apartment={item}></ApartmenItem>
@@ -52,6 +56,7 @@
         </FlatList>    
        </View>
        </SafeAreaView>
+       </ScrollView>
     );
     }else{
             return(
@@ -65,7 +70,11 @@
           </View>
             <View style={Styles.container_not} >
                 <Text style={Styles.title} >Aun no tienes apartamentos agregados, presiona el siguiente boton para agregar uno.</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                  navigation.navigate("saveapartment",
+                   {id: id});
+                }
+                }>
                     <View style={Styles.btn}>
                         <Text style={Styles.btn_text}>Agregar Apartamento</Text>
                     </View>
@@ -74,7 +83,7 @@
         </SafeAreaView>
     );
     }
-   
+
  };
  
  export default ApartmentsUser;

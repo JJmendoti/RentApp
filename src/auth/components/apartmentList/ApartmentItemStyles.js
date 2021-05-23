@@ -9,7 +9,6 @@ const Styles = StyleSheet.create({
       borderRadius: 10,
       borderColor: "#010101",
       borderWidth: 1,
-      width: Dimensions.get('screen').width * 1,
     },
     logo: {
       flex: 1,
