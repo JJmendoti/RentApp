@@ -64,78 +64,115 @@
       <Slider images={images}/>
       <Text style={Styles.title}>Connect House</Text>
       <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
+        
         <Image style={Styles.cardImg} source={require('./img/cartagena.jpg')}/>
-        <Text style={Styles.cardText}>cartagena</Text>
+        <Text style={Styles.cardText}>Cartagena</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/villa.jpg')}/>
         <Text style={Styles.cardText}>Villa de Leiva</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/santa.jpg')}/>
         <Text style={Styles.cardText}>Santa Marta</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/san.jpg')}/>
-        <Text style={Styles.cardText}>San Andres</Text>
+        <Text style={Styles.cardText}>San Andrés</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/arboletes.jpg')}/>
         <Text style={Styles.cardText}>Arboletes</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/bogota.jpg')}/>
         <Text style={Styles.cardText}>Bogóta</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/capurgana.jpg')}/>
-        <Text style={Styles.cardText}>Capurgana</Text>
+        <Text style={Styles.cardText}>Capurganá</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/medellin.jpg')}/>
         <Text style={Styles.cardText}>Medellín</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/melgar.jpg')}/>
         <Text style={Styles.cardText}>Melgar</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/Palomino.jpg')}/>
         <Text style={Styles.cardText}>Palomino</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/guatape.jpg')}/>
         <Text style={Styles.cardText}>Guatape</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/girardot.jpg')}/>
-        <Text style={Styles.cardText}>girardot</Text>
+        <Text style={Styles.cardText}>Girardot</Text>
       </TouchableOpacity>
 
 
       <Text style={Styles.title}>Dispones de los mejores Hoteles</Text>
-      <TouchableOpacity style={Styles.card}>
+      <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel1.jpg')}/>
         <Text></Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Styles.card}>
+        <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel2.jpg')}/>
         <Text></Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Styles.card}>
+        <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel3.jpg')}/>
         <Text></Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Styles.card}>
+        <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel4.jpg')}/>
         <Text></Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Styles.card}>
+        <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel5.jpg')}/>
         <Text></Text>
         </TouchableOpacity>
-        <TouchableOpacity style={Styles.card}>
+        <TouchableOpacity onPress={() => {
+              navigation.navigate('apartments');
+            }} style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel6.jpg')}/>
         <Text></Text>
       </TouchableOpacity>

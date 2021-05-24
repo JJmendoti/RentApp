@@ -94,6 +94,7 @@ const Styles = StyleSheet.create({
     paddingBottom: 1,
     backgroundColor: '#fff',
     marginBottom: 10,
+    borderRadius: 15,
     marginLeft: '2%',
     width: '96%',
     shadowColor: '#000',
