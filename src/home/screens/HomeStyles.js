@@ -10,19 +10,33 @@ const Styles = StyleSheet.create({
 
   },
   login: {
-    backgroundColor: '#FF9700',
-    width: 100,
+    backgroundColor: '#fff',
+    width: 80,
     alignItems: 'center',
     marginTop: 10,
     padding: 10,
     borderRadius: 16,
-    fontSize: '15',
+    
+  },
+  loginText:{
+    color: '#FF9700',
+    fontSize: 22,
+
   },
   loginContainer: {
     flexDirection: 'row',
     paddingRight: 10,
     backgroundColor: '#010101',
     borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+
+    elevation: 7,
 
   },
   signContainer: {
@@ -36,7 +50,7 @@ const Styles = StyleSheet.create({
     marginTop: 10,
     padding: 30,
     borderRadius: 15,
-    marginRight: 140,
+    marginRight: 165,
     marginLeft: 10,
   },
   title: {

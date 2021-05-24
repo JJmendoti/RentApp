@@ -39,10 +39,14 @@
               navigation.navigate('login');
             }}>
             <View style={Styles.login}>
-              <Text>Login</Text>
+              <Text style={Styles.loginText}>Login</Text>
             </View>
           </TouchableOpacity>
       </View>
+
+
+
+
       <Text style={Styles.title}>Connect House</Text>
       <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
       <TouchableOpacity style={Styles.card}>
@@ -94,6 +98,34 @@
         <Text style={Styles.cardText}>girardot</Text>
       </TouchableOpacity>
 
+
+      <Text style={Styles.text}>Dispones de los mejores Hoteles</Text>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel1.jpg')}/>
+        <Text></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel2.jpg')}/>
+        <Text></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel3.jpg')}/>
+        <Text></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel4.jpg')}/>
+        <Text></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel5.jpg')}/>
+        <Text></Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/hotel6.jpg')}/>
+        <Text></Text>
+      </TouchableOpacity>
+
+
       <Text style={Styles.text}>Brindando las mejores Experiencias</Text>
       <View style={Styles.containerImg}>
       <Image source={require('./img/gallery_1.jpg')}
@@ -118,6 +150,51 @@
           style={Styles.Img}
         />
         <Image source={require('./img/gallery_6.jpg')}
+          style={Styles.Img}
+        />
+      </View>
+      <View style={Styles.containerImg}>
+
+        <Image source={require('./img/gallery_7.jpg')}
+          style={Styles.Img}
+        />
+        <Image source={require('./img/gallery_8.jpg')}
+          style={Styles.Img}
+        />
+      </View>
+      <View style={Styles.containerImg}>
+
+        <Image source={require('./img/gallery_9.jpg')}
+          style={Styles.Img}
+        />
+        <Image source={require('./img/gallery_10.jpg')}
+          style={Styles.Img}
+        />
+      </View>
+      <View style={Styles.containerImg}>
+
+        <Image source={require('./img/gallery_11.jpg')}
+          style={Styles.Img}
+        />
+        <Image source={require('./img/gallery_12.jpg')}
+          style={Styles.Img}
+        />
+      </View>
+      <View style={Styles.containerImg}>
+
+        <Image source={require('./img/gallery_13.jpg')}
+          style={Styles.Img}
+        />
+        <Image source={require('./img/gallery_14.jpg')}
+          style={Styles.Img}
+        />
+      </View>
+      <View style={Styles.containerImg}>
+
+        <Image source={require('./img/gallery_15.jpg')}
+          style={Styles.Img}
+        />
+        <Image source={require('./img/gallery_16.jpg')}
           style={Styles.Img}
         />
       </View>
