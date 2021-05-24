@@ -74,7 +74,7 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Img: {
-    width: 190,
+    width: 195,
     height: 190,
     borderRadius: 10,
     borderColor: '#010101',
@@ -118,6 +118,11 @@ const Styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 15,
   },
+  texExperiences: {
+    color: '#FF9700',
+    fontSize: 20,
+    marginBottom: 5
+  }
 
 
 

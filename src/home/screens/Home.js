@@ -24,8 +24,26 @@
    TouchableOpacity,
    FlatList
  } from 'react-native';
- 
+
+ import Slider from './Slider.js'
  import Styles from './HomeStyles.js';
+
+ const images = [
+  'https://images.pexels.com/photos/3727533/pexels-photo-3727533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/577584/pexels-photo-577584.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/7625034/pexels-photo-7625034.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/2797332/pexels-photo-2797332.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/1450363/pexels-photo-1450363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/2106776/pexels-photo-2106776.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/6735399/pexels-photo-6735399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/3811316/pexels-photo-3811316.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/365668/pexels-photo-365668.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/7624936/pexels-photo-7624936.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+]
+
+
  const Home = ({route,navigation}) => {  
    return (
     <ScrollView>
@@ -43,10 +61,7 @@
             </View>
           </TouchableOpacity>
       </View>
-
-
-
-
+      <Slider images={images}/>
       <Text style={Styles.title}>Connect House</Text>
       <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
       <TouchableOpacity style={Styles.card}>
@@ -99,7 +114,7 @@
       </TouchableOpacity>
 
 
-      <Text style={Styles.text}>Dispones de los mejores Hoteles</Text>
+      <Text style={Styles.title}>Dispones de los mejores Hoteles</Text>
       <TouchableOpacity style={Styles.card}>
         <Image style={Styles.cardImg} source={require('./img/hotel1.jpg')}/>
         <Text></Text>
@@ -126,7 +141,7 @@
       </TouchableOpacity>
 
 
-      <Text style={Styles.text}>Brindando las mejores Experiencias</Text>
+      <Text style={Styles.texExperiences}>Brindando las mejores Experiencias</Text>
       <View style={Styles.containerImg}>
       <Image source={require('./img/gallery_1.jpg')}
           style={Styles.Img}
