@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Image, ScrollView, Dimensions, Text, StyleSheet} from 'react-native';
 
 const {width} = Dimensions.get("window");
-const height = width * 0.6; // 60%
+const height = width * 0.7; 
 
 export default class Slider extends React.Component{
     state = {
@@ -48,12 +48,12 @@ export default class Slider extends React.Component{
 const style = StyleSheet.create({
     container: {
         marginTop: 5,
-         width,
-         height
+        width,
+        height,
     },
     scroll: {
         width,
-        height
+        height,
     },
     image: {
         width,

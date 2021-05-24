@@ -50,7 +50,7 @@ const Styles = StyleSheet.create({
     marginTop: 10,
     padding: 30,
     borderRadius: 15,
-    marginRight: 165,
+    marginRight: '45%',
     marginLeft: 10,
   },
   title: {
@@ -96,7 +96,7 @@ const Styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 15,
     marginLeft: '2%',
-    width: '96%',
+    width: '100%',
     shadowColor: '#000',
     shadowOpacity: 1,
     shadowOffset: {
