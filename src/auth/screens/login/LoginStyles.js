@@ -61,7 +61,7 @@ const Styles = StyleSheet.create({
         color: '#424242',
     },
     register: {
-      backgroundColor: '#D4AC0D',
+      backgroundColor: '#FF9700',
       width: 100,
       alignItems: 'center',
       marginTop: 10,
@@ -78,7 +78,7 @@ const Styles = StyleSheet.create({
 
     },
     sign: {
-      backgroundColor: '#D4AC0D',
+      backgroundColor: '#FF9700',
       width: Dimensions.get('screen').width * 0.9,
       alignItems: 'center',
       marginBottom: 10,

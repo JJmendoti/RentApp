@@ -31,6 +31,9 @@
     <ScrollView>
      <SafeAreaView style={Styles.container}>
      <View style={Styles.loginContainer}>
+      <View style={Styles.logoContainer}>
+            <Image source={require('./img/logo2.png')} style={Styles.logo}/>
+      </View>
           <TouchableOpacity
             onPress={() => {
               navigation.navigate('login');
@@ -39,12 +42,59 @@
               <Text>Login</Text>
             </View>
           </TouchableOpacity>
-        </View>
-        <Text style={Styles.title}>RENT APP</Text>
-      <View>
-        <Text>Brindando las mejores Experiencias</Text>
       </View>
+      <Text style={Styles.title}>Connect House</Text>
+      <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/cartagena.jpg')}/>
+        <Text style={Styles.cardText}>cartagena</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/villa.jpg')}/>
+        <Text style={Styles.cardText}>Villa de Leiva</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/santa.jpg')}/>
+        <Text style={Styles.cardText}>Santa Marta</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/san.jpg')}/>
+        <Text style={Styles.cardText}>San Andres</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/arboletes.jpg')}/>
+        <Text style={Styles.cardText}>Arboletes</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/bogota.jpg')}/>
+        <Text style={Styles.cardText}>Bogóta</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/capurgana.jpg')}/>
+        <Text style={Styles.cardText}>Capurgana</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/medellin.jpg')}/>
+        <Text style={Styles.cardText}>Medellín</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/melgar.jpg')}/>
+        <Text style={Styles.cardText}>Melgar</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/Palomino.jpg')}/>
+        <Text style={Styles.cardText}>Palomino</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/guatape.jpg')}/>
+        <Text style={Styles.cardText}>Guatape</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={Styles.card}>
+        <Image style={Styles.cardImg} source={require('./img/girardot.jpg')}/>
+        <Text style={Styles.cardText}>girardot</Text>
+      </TouchableOpacity>
 
+      <Text style={Styles.text}>Brindando las mejores Experiencias</Text>
       <View style={Styles.containerImg}>
       <Image source={require('./img/gallery_1.jpg')}
           style={Styles.Img}

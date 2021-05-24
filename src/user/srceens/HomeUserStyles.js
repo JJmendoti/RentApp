@@ -59,7 +59,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   btn: {
-    backgroundColor: '#D4AC0D',
+    backgroundColor: '#FF9700',
     borderRadius: 10,
     padding: 10,
     marginTop: 30,

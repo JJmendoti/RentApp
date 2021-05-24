@@ -51,7 +51,7 @@ const Styles = StyleSheet.create({
         fontSize: 20
     },
     sign: {
-        backgroundColor: '#D4AC0D',
+        backgroundColor: '#FF9700',
         width: Dimensions.get('screen').width * 0.9,
         alignItems: 'center',
         marginTop: 30,

@@ -12,7 +12,7 @@ const Styles = StyleSheet.create({
         fontSize: 20,
     },
     btn: {
-        backgroundColor: '#D4AC0D',
+        backgroundColor: '#FF9700',
         padding: 15,
         borderRadius: 10,
         marginTop:20
