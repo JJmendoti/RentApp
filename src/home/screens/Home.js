@@ -198,7 +198,9 @@
           style={Styles.Img}
         />
       </View>
-       
+      
+      <Text style={Styles.derechos}>&copy;-Connect-House,Todos los derechos reservados 2021</Text>
+ 
      </SafeAreaView>
      </ScrollView>
    );

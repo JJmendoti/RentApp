@@ -109,7 +109,15 @@ const Styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 15,
 
-  }
+  },
+  derechos:{
+    backgroundColor: '#010101',
+    color: '#FF9700',
+    paddingLeft: 5,
+    marginTop: 20,
+    borderRadius: 10,
+    fontSize: 15,
+  },
 
 
 
