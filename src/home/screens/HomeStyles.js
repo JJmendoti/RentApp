@@ -11,7 +11,7 @@ const Styles = StyleSheet.create({
   },
   login: {
     backgroundColor: '#fff',
-    width: 80,
+    width: '100%',
     alignItems: 'center',
     marginTop: 10,
     padding: 10,
@@ -20,12 +20,12 @@ const Styles = StyleSheet.create({
   },
   loginText:{
     color: '#FF9700',
-    fontSize: 22,
+    fontSize: 20,
 
   },
   loginContainer: {
     flexDirection: 'row',
-    paddingRight: 10,
+    paddingRight: '15%',
     backgroundColor: '#010101',
     borderRadius: 10,
     shadowColor: "#000",
@@ -72,9 +72,10 @@ const Styles = StyleSheet.create({
   containerImg: {
     flex: 1,
     flexDirection: 'row',
+    width: '100%'
   },
   Img: {
-    width: 195,
+    width: '48%',
     height: 190,
     borderRadius: 10,
     borderColor: '#010101',
@@ -96,7 +97,7 @@ const Styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 15,
     marginLeft: '2%',
-    width: '100%',
+    width: '96%',
     shadowColor: '#000',
     shadowOpacity: 1,
     shadowOffset: {
