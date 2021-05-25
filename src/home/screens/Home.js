@@ -65,6 +65,16 @@
       </View>
       <Slider images={images}/>
       <Text style={Styles.title}>Connect House</Text>
+
+      <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('users');
+            }}>
+            <View style={Styles.login}>
+              <Text style={Styles.userText}>Users</Text>
+            </View>
+          </TouchableOpacity>
+
       <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
       <TouchableOpacity onPress={() => {
               navigation.navigate('apartments');

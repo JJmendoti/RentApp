@@ -23,6 +23,20 @@ const Styles = StyleSheet.create({
     fontSize: 20,
 
   },
+  login: {
+    backgroundColor: '#ccf',
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 10,
+    padding: 10,
+    borderRadius: 16,
+    
+  },
+  userText:{
+    color: '#FF9700',
+    fontSize: 20,
+
+  },
   loginContainer: {
     flexDirection: 'row',
     paddingRight: '15%',

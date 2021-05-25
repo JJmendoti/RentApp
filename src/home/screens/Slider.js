@@ -29,6 +29,7 @@ export default class Slider extends React.Component{
                             key={index}
                             source={{uri: image}}
                             style={style.image} />
+                            
                     ))
                 }
                 </ScrollView>
@@ -48,7 +49,7 @@ export default class Slider extends React.Component{
 const style = StyleSheet.create({
     container: {
         marginTop: 5,
-        width: '100%',
+        width,
         height,
     },
     scroll: {
@@ -58,8 +59,10 @@ const style = StyleSheet.create({
     image: {
         width,
         height,
+        borderRadius: 15,
         resizeMode: 
         'cover'
+
     },
     pagination : {
         flexDirection:
