@@ -63,7 +63,9 @@
             </View>
           </TouchableOpacity>
       </View>
+      </SafeAreaView>
       <Slider images={images}/>
+      <SafeAreaView style={Styles.container}>
       <Text style={Styles.title}>Connect House</Text>
       <Text style={Styles.text}>Nuestras Ciudades Representativas...</Text>
       <TouchableOpacity onPress={() => {
