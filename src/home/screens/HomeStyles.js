@@ -23,7 +23,7 @@ const Styles = StyleSheet.create({
     fontSize: 20,
 
   },
-  login: {
+  userText: {
     backgroundColor: '#ccf',
     width: '100%',
     alignItems: 'center',
