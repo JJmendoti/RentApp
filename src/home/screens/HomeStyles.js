@@ -28,8 +28,8 @@ const Styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     marginTop: 10,
-    padding: 10,
-    borderRadius: 16,
+    adding: 10,
+    borderRadius: 16,p
     
   },
   userText:{
