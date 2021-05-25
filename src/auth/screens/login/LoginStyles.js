@@ -92,7 +92,18 @@ const Styles = StyleSheet.create({
     },
     recoveredText: {
       color: '#fff'
-    }
+    },
+    containerBack: {
+      padding: 10,
+      flexDirection: 'row',
+      alignSelf: 'flex-start',
+      position: 'absolute',
+
+    }, 
+    imageBack: {
+      width: 40,
+      height: 40
+  },
   });
 
 export default Styles;
