@@ -77,7 +77,7 @@ const LoginScreen = ({navigation}) => {
           </TouchableOpacity>
           <View style={Styles.containerBack}>
             <TouchableOpacity onPress={()=>{
-              navigation.navigate("login");
+              navigation.navigate("home");
             }}>
               <Image source={require('./img/logo1.png')} style={Styles.imageBack} />
             </TouchableOpacity>
