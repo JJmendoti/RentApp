@@ -24,7 +24,7 @@ const Styles = StyleSheet.create({
 
   },
   login: {
-    backgroundColor: '#ccf',
+    backgroundColor: '#fff',
     width: '100%',
     alignItems: 'center',
     marginTop: 10,
