@@ -31,19 +31,19 @@ import ApartmentService from '../../../services/ApartmentService'
  const ViewApartmentUser = ({route,navigation}) => {
 
     const deleteApartment = (id) => {  
-      fetch('https://api-rentapp.herokuapp.com/apartment/'+id, {
+      fetch('https://api-rentapp.herokuapp.com/delete-apartment/'+id, {
         method: 'DELETE',
         headers: { 
             "Content-type": "application/json; charset=UTF-8"
         },
-        body: JSON.stringify({"id": id,})
+        body: JSON.stringify({"id": id})
       })
       .then(response => response.json())
       .then(json => {
         if(json.status == "200"){
               Alert.alert("Apartamento Eliminado correctamente");
               setTimeout(() => {
-                navigation.navigate("apartmentuser")
+                navigation.navigate("homeuser")
               }, 3000);
              
         }else {
@@ -80,12 +80,20 @@ import ApartmentService from '../../../services/ApartmentService'
              <Text style={Styles.item}>Valor noche: {value}</Text>
            </View> 
       <View style={Styles.btnContainer}>
-      <TouchableOpacity onPress={()=> {navigation.navigate("updateap",{id:id})}}>
+      <TouchableOpacity onPress={()=> {navigation.navigate("updateap",{
+        id:id,
+        name: name,
+        country: country,
+        address: address,
+        city: city,
+        image: image,
+        value: value,
+        })}}>
       <View style={Styles.edit}>
          <Text style={Styles.btnText}>EDITAR APARTAMENTO</Text>
        </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={()=>deleteApartment()}>
+      <TouchableOpacity onPress={()=>deleteApartment(id)}>
       <View style={Styles.del}>
          <Text style={Styles.btnText}>ELIMINAR APARTAMENTO</Text>
        </View>
