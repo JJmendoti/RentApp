@@ -48,9 +48,9 @@
             </View>
           </TouchableOpacity>
       </View>
-      
+      </SafeAreaView>
       <Slider/>
-
+      <SafeAreaView style={Styles.container}>
       <Text style={Styles.title}>Connect House</Text>
 
       <TouchableOpacity
@@ -58,7 +58,7 @@
               navigation.navigate('users');
             }}>
             <View style={Styles.login}>
-              <Text style={Styles.userText}>Users</Text>
+              <Text style={Styles.userText}>Usuarios</Text>
             </View>
           </TouchableOpacity>
 

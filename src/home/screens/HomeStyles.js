@@ -39,7 +39,7 @@ const Styles = StyleSheet.create({
   },
   loginContainer: {
     flexDirection: 'row',
-    paddingRight: '15%',
+    paddingRight: '5%',
     backgroundColor: '#010101',
     borderRadius: 10,
     shadowColor: "#000",

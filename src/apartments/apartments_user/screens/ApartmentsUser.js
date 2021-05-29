@@ -48,6 +48,15 @@
         return(
         <ScrollView>
         <SafeAreaView style={Styles.container}>
+        <View style={Styles.container_btn}>
+          <TouchableOpacity onPress={() =>{navigation.navigate("saveapartment",{id:id})}}>
+            <View style={Styles.btn}>
+              <Text style={Styles.btn_text}>
+                Agregar Apartamento
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
         <View style={Styles.containersha}>
         <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => ApartmentService.getApartment(item._id.$oid)}>
         <ApartmenItem apartment={item}></ApartmenItem>

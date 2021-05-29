@@ -19,8 +19,8 @@
    ScrollView,
  } from 'react-native';
  
- import Styles from './SaveApartmentStyles.js';
- const SaveApartment = ({route, navigation}) => {
+ import Styles from './UpdateApartmentStyles';
+ const UpdateApartment = ({route, navigation}) => {
     let id = route.params.id;
     const[name, setName] = useState("")
     const[address, setAddress] = useState("")
@@ -191,5 +191,5 @@
  
  
  
- export default SaveApartment;
+ export default UpdateApartment;
  

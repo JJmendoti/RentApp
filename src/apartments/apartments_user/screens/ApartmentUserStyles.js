@@ -11,6 +11,9 @@ const Styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
     },
+    container_btn: {
+        padding: 20,
+    },
     btn: {
         backgroundColor: '#FF9700',
         padding: 15,
