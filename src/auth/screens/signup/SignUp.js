@@ -44,11 +44,35 @@
     const[city, setCity] = useState("")
     const[image, setImage] = useState("")
 
+        const saveUser = (email, password, name , ident, country, city, image) => {  
+          fetch('https://api-rentapp.herokuapp.com/user', {
+        method: 'POST',
+        headers: { 
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify({"email": email, "password": password, "name": name,"ident": ident,"country": country, "city":city, "image": "https://api-rentapp.herokuapp.com/static/img/"+image})
+      })
+      .then(response => response.json())
+      .then(json => {
+        if(json.status == "200"){
+              Alert.alert("Usuario guardado correctamente 'Inica Sesión'");
+              setTimeout(() => {
+                navigation.navigate("login",{
+              })
+              }, 3000);
+             
+        }else {
+          Alert.alert("Datos incorrectos")
+        }
+      })
+      .catch((err) => { Alert.alert('Error:',err.message) });
+    };
     const validateLogin = () =>{
       if(email === "" || password === "" || name === "" || ident === "" || country ===""|| city===""||image === ""){
         Alert.alert("Todos los Campos deben estar llenos")
         
       }else {
+        saveUser(email, password, name , ident, country, city, image);
        setEmail("");
        setPassword("");
        setIdent("")
@@ -84,10 +108,12 @@
               inlineImageLeft = 'outline_person_black_20'
               defaultValue = {name}
               inlineImagePadding = {15}
-              keyboardType = 'email-address'
               style={Styles.input}
               placeholder="Nombre"
               underlineColorAndroid="transparent"
+              onChangeText={text => {
+                setName(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -99,7 +125,10 @@
               keyboardType = 'email-address'
               style={Styles.input}
               placeholder="email"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setEmail(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -108,10 +137,12 @@
               inlineImageLeft = 'outline_branding_watermark_black_20'
               defaultValue = {ident}
               inlineImagePadding = {15}
-              keyboardType = 'email-address'
               style={Styles.input}
               placeholder="Identificación"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setIdent(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -123,7 +154,10 @@
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Contraseña"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setPassword(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -131,11 +165,13 @@
               <TextInput
               inlineImageLeft = 'outline_flag_black_20'
               defaultValue = {country}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Pais"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setCountry(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -143,11 +179,13 @@
               <TextInput
               inlineImageLeft = 'outline_apartment_black_20'
               defaultValue = {city}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Ciudad"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setCity(text);
+              }}
               />
             </View>
             <View style={Styles.searchSection}>
@@ -155,11 +193,13 @@
               <TextInput
               inlineImageLeft = 'outline_image_black_20'
               defaultValue = {image}
-              secureTextEntry = {true}
               inlineImagePadding = {15}
               style={Styles.input}
               placeholder="Imagen"
-              underlineColorAndroid="transparent"
+              underlineColorAndroid="transparent" 
+              onChangeText={text => {
+                setImage(text);
+              }}
               />
             </View>
        </View>
@@ -175,8 +215,6 @@
      </ScrollView>
    );
  };
- 
- 
  
  export default SignUp;
  
