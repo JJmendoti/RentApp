@@ -23,20 +23,24 @@
    TouchableHighlight,
    TouchableOpacity,
    FlatList,
-   SliderComponent
+   SliderComponent,
+   TouchableWithoutFeedback,
  } from 'react-native';
  
  import Styles from './ApartmentUserStyles.js';
  import ApartmenItem from '../../../auth/components/apartmentList/ApartmenItem.js'
  import ApartmentService from '../../../services/ApartmentService.js'
  const ApartmentsUser = ({route,navigation}) => {
+  
     let id = route.params.id;
-   const[apartment,setApartment]=useState([])
-
+   const[apartment,setApartment]=useState([]);
     const getApartments = async (ide)  => {
       const apartment  = await ApartmentService.getApartmentUser(ide);
       setApartment(apartment);
     }
+    _onPressItem = (item) => {
+      console.log(item);
+  }
     useEffect(() => {
       
       getApartments(id)
@@ -58,10 +62,16 @@
           </TouchableOpacity>
         </View>
         <View style={Styles.containersha}>
-        <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => ApartmentService.getApartment(item._id.$oid)}>
+        <FlatList data={apartment} renderItem = {({item, index})=>(
+       <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('viewapuser',{
+              name:item.name,
+              image: item.image
+            })
+          }}>
         <ApartmenItem apartment={item}></ApartmenItem>
-        </TouchableOpacity>}
-         keyExtractor={(item, index) => index.toString()}>
+        </TouchableOpacity>)}>
         </FlatList>    
        </View>
        </SafeAreaView>

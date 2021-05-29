@@ -48,7 +48,7 @@
    return (
      <SafeAreaView style={Styles.container}>
        <View style={Styles.containersha}>
-        <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => ApartmentService.getApartment(item._id.$oid)}>
+        <FlatList data={apartment} renderItem = {({item})=><TouchableOpacity onPress={() => console.log(item)}>
         <ApartmenItem apartment={item}></ApartmenItem>
         </TouchableOpacity>}
          keyExtractor={(item, index) => index.toString()}>
