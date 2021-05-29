@@ -23,7 +23,7 @@ import HomeUser from './src/user/srceens/HomeUser.js';
 import ApartmentsUser from './src/apartments/apartments_user/screens/ApartmentsUser.js';
 import SaveApartment from './src/apartments/screens/apartments/save-apartment/SaveApartment'
 import ViewApartmentUser from './src/apartments/apartments_user/screens/VieApartmentUser'
-
+import UpdateApartment from './src/apartments/screens/apartments/update-apartment/UpdateApartment'
 
 
 const Stack = createStackNavigator();
@@ -46,6 +46,7 @@ const App = () => {
         <Stack.Screen name="apartmentuser" component={ApartmentsUser} options={{headerShown: false}} />
         <Stack.Screen name="saveapartment" component={SaveApartment} options={{headerShown: false}} />
         <Stack.Screen name="viewapuser" component={ViewApartmentUser} options={{headerShown: false}} />
+        <Stack.Screen name="updateap" component={UpdateApartment} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

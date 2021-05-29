@@ -50,7 +50,6 @@
   
       if(apartment.length > 0){
         return(
-        <ScrollView>
         <SafeAreaView style={Styles.container}>
         <View style={Styles.container_btn}>
           <TouchableOpacity onPress={() =>{navigation.navigate("saveapartment",{id:id})}}>
@@ -67,15 +66,20 @@
           onPress={() => {
             navigation.navigate('viewapuser',{
               name:item.name,
-              image: item.image
+              image: item.image,
+              country: item.country,
+              city: item.city,
+              value: item.nigth_value,
+              address: item.address,
+              id: item._id.$oid
             })
           }}>
         <ApartmenItem apartment={item}></ApartmenItem>
-        </TouchableOpacity>)}>
+        </TouchableOpacity>)}
+        keyExtractor={(item, index) => index.toString()}>
         </FlatList>    
        </View>
        </SafeAreaView>
-       </ScrollView>
     );
     }else{
             return(
