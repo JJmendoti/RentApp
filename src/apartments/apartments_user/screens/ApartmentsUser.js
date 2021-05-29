@@ -38,9 +38,7 @@
       const apartment  = await ApartmentService.getApartmentUser(ide);
       setApartment(apartment);
     }
-    _onPressItem = (item) => {
-      console.log(item);
-  }
+  
     useEffect(() => {
       
       getApartments(id)

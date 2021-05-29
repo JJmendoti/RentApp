@@ -5,7 +5,6 @@
  * @format
  * @flow strict-local
  */
-
  import React, {useState, useEffect} from 'react';
  import {
   SafeAreaView,
@@ -24,9 +23,7 @@
    TouchableOpacity,
    ActivityIndicator,
  } from 'react-native';
- 
- 
- 
+
 //  import {
 //    Colors,
 //    DebugInstructions,
@@ -38,7 +35,7 @@
  const SplashScreen = ({navigation}) => {
     const splash = ()=> {
         setTimeout(() => {
-              navigation.navigate("signup")    
+              navigation.navigate("home")    
       },3000);
     };
     
