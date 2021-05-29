@@ -30,7 +30,6 @@ import Styles from './ApartmentItemStyles';
  const ApartmenItem = (props) => {
         let image = props.apartment.image;
       return(
-        <TouchableOpacity >
           <View style={Styles.container}>
             <View>
               <Image style={Styles.logo} source={{uri: image}}></Image>
@@ -42,7 +41,6 @@ import Styles from './ApartmentItemStyles';
               <Text>Precio: {props.apartment.nigth_value}</Text>
             </View>
           </View>
-        </TouchableOpacity>
       )
  };
  

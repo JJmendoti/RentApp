@@ -44,7 +44,7 @@
               navigation.navigate('login');
             }}>
             <View style={Styles.login}>
-              <Text style={Styles.loginText}>Login</Text>
+              <Text style={Styles.loginText}>Iniciar sesión</Text>
             </View>
           </TouchableOpacity>
       </View>

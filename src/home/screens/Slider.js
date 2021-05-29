@@ -32,7 +32,7 @@ export default class CarouselExample extends Component {
           autoplay
           pageInfo 
           arrowStyle
-          onAnimateNextPage={(p) => console.log(p)}
+          
         >
           <Image source={{uri: 'https://images.pexels.com/photos/3727533/pexels-photo-3727533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'}} style={{width: this.state.width, height: 230, resizeMode: 'cover',    borderRadius: 16, }}/>
           <Image source={{uri: 'https://images.pexels.com/photos/5441742/pexels-photo-5441742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}} style={{width: this.state.width, height: 230, resizeMode: 'cover',    borderRadius: 16,}}/>
