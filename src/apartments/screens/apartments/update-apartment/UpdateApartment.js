@@ -22,33 +22,35 @@
  import Styles from './UpdateApartmentStyles';
  const UpdateApartment = ({route, navigation}) => {
 
-  let name_p = route.params.name;
+    let name_p = route.params.name;
     let image_p = route.params.image;
     let country_p = route.params.country;
     let city_p = route.params.city;
     let address_p = route.params.address;
     let value_p = route.params.value;
     let id_p = route.params.id;
-  const[name, setName] = useState("")
-  const[address, setAddress] = useState("")
-  const[value, setValue] = useState("")
-  const[country, setCountry] = useState("")
-  const[city, setCity] = useState("")
-  const[image, setImage] = useState("")
+    let idonwer = route.params.idonwer;
+    const[name, setName] = useState("")
+    const[address, setAddress] = useState("")
+    const[value, setValue] = useState("")
+    const[country, setCountry] = useState("")
+    const[city, setCity] = useState("")
+    const[image, setImage] = useState("")
+  
 
 
-  const saveAp = (name, address,value,country,city,image, id) => {  
-      fetch('https://api-rentapp.herokuapp.com/apartment', {
-        method: 'POST',
+  const saveAp = (name, address,value,country,city,image, id, idonwer) => {  
+      fetch('https://api-rentapp.herokuapp.com/apartment/'+id, {
+        method: 'PUT',
         headers: { 
             "Content-type": "application/json; charset=UTF-8"
         },
-        body: JSON.stringify({"idonwer": id, "name": name, "address": address,"nigth_value": value,"country": country, "city":city, "image": "https://api-rentapp.herokuapp.com/static/img/"+image})
+        body: JSON.stringify({"idonwer":idonwer, "name": name, "address": address,"nigth_value": value,"country": country, "city":city, "image": image})
       })
       .then(response => response.json())
       .then(json => {
         if(json.status == "200"){
-              Alert.alert("Apartamento guardado correctamente");
+              Alert.alert("Apartamento Actualizado correctamente");
               setTimeout(() => {
                 navigation.navigate("homeuser",{
                   id: id
@@ -67,7 +69,7 @@
       Alert.alert("Todos los Campos deben estar llenos")
       
     }else {
-      saveAp(name,address,value,country,city,image, id);
+      saveAp(name,address,value,country,city,image, id_p,idonwer);
     //   setAddress("");
     //   setValue("");
     //  setName("");

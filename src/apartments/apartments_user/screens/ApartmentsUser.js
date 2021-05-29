@@ -69,7 +69,8 @@
               city: item.city,
               value: item.nigth_value,
               address: item.address,
-              id: item._id.$oid
+              id: item._id.$oid,
+              idonwer: item.idonwer
             })
           }}>
         <ApartmenItem apartment={item}></ApartmenItem>

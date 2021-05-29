@@ -59,6 +59,7 @@ import ApartmentService from '../../../services/ApartmentService'
     let address = route.params.address;
     let value = route.params.value;
     let id = route.params.id;
+    let idonwer = route.params.idonwer;
     return(
         <SafeAreaView style={Styles.container}>
             <View style={Styles.containerBack}>
@@ -88,6 +89,7 @@ import ApartmentService from '../../../services/ApartmentService'
         city: city,
         image: image,
         value: value,
+        idonwer: idonwer
         })}}>
       <View style={Styles.edit}>
          <Text style={Styles.btnText}>EDITAR APARTAMENTO</Text>
