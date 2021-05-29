@@ -198,7 +198,7 @@
      <View style={Styles.signContainer}>
     <TouchableOpacity onPress={()=>validateApartment()}>
     <View style={Styles.sign}>
-       <Text style={Styles.signText}>REGISTRAR APARTAMENTO</Text>
+       <Text style={Styles.signText}>ACTUALIZAR APARTAMENTO</Text>
      </View>
     </TouchableOpacity>
     </View>
